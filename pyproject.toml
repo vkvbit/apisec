@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apisec"
+version = "1.0"
+description = "API Security Testing Tool"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    { name = "Vaibhav Kumar", email = "myselfv@hotmail.com" }
+]
+keywords = ["apisec", "rest", "graphql", "soap", "restful", "api", "security", "scanner", "tool", "vulnerability"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.urls]
+homepage = "https://github.com/vkvbit/apisec"
+download_url = "https://github.com/vkvbit/apisec"
+
+[project.scripts]
+apisec = "apisec.__main__:main"
+
+[dependencies]
+python = ">=3.6"
+offat = "*"
+argparse = "*"

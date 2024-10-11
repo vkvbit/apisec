@@ -1,11 +1,12 @@
 import subprocess
 import json
+from . import init
 
-
+zap_path = init.zap_path
 
 def zap_soap(uri):        
         
-    zap_cmd_soap = f"/usr/share/zaproxy/zap.sh -cmd -quickurl {uri} -quickout /app/zap/report.json"
+    zap_cmd_soap = f"{zap_path} -cmd -quickurl {uri} -quickout /app/zap/report.json"
     subprocess.run(zap_cmd_soap, shell=True)
 
     with open('/app/zap/report.json', 'r') as file:

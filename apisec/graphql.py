@@ -1,9 +1,12 @@
 import subprocess
 import json
+from . import init
+
+graphql_cop_path = init.graphql_cop_path
 
 def scan_graphql(endpoint):
     
-    graphql_cmd = f"python3 /graphql-cop/graphql-cop.py -t {endpoint} -o json"
+    graphql_cmd = f"python3 {graphql_cop_path} -t {endpoint} -o json"
     
     graphql_result = subprocess.run(graphql_cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
