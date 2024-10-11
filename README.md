@@ -1,6 +1,6 @@
 # `apisec` (API Security Testing Tool )
 
-![Static Badge](https://img.shields.io/badge/made_with-Python-blue) ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
+![Static Badge](https://img.shields.io/badge/made_with-Python-blue) ![Static Badge](https://img.shields.io/badge/license-MIT-blue) ![Keybase PGP](https://img.shields.io/keybase/pgp/vkvbit?style=social&logoColor=blue&labelColor=blue&color=blue)
 
 This tool allows you to perform security scans on various types of APIs, including REST, SOAP, and GraphQL. It provides basic and advanced scans and integrates with Swagger for automated testing.
 
