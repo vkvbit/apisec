@@ -31,6 +31,13 @@ cd apisec-tool
 pip install .
 ```
 
+### Post Install 
+After installing apisec, run below command to install all dependecies and sync path variables.
+
+```bash
+apisec -i
+```
+
 ## Usage
 
 ### REST API
