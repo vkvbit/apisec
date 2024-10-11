@@ -26,7 +26,7 @@ classifiers = [
 
 [project.urls]
 homepage = "https://github.com/vkvbit/apisec"
-download_url = "https://github.com/vkvbit/apisec"
+download_url = "https://github.com/vkvbit/apisec/archive/refs/tags/1.0.zip"
 
 [project.scripts]
 apisec = "apisec.__main__:main"

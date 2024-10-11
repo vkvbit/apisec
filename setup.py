@@ -8,7 +8,7 @@ setup(
     version='1.0',
     packages=['apisec'],
     url='https://github.com/vkvbit/apisec',
-    download_url='https://github.com/vkvbit/apisec',
+    download_url='https://github.com/vkvbit/apisec/archive/refs/tags/1.0.zip',
     license='MIT',
     author='Vaibhav Kumar',
     author_email='myselfv@hotmail.com',
