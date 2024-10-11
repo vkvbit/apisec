@@ -1,4 +1,4 @@
-# API Security Testing Tool
+# `apisec` (API Security Testing Tool )
 
 ![Static Badge](https://img.shields.io/badge/made_with-Python-blue) ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
 
