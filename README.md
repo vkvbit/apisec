@@ -1,5 +1,7 @@
 # API Security Testing Tool
 
+![Static Badge](https://img.shields.io/badge/made_with-Python-blue) ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
+
 This tool allows you to perform security scans on various types of APIs, including REST, SOAP, and GraphQL. It provides basic and advanced scans and integrates with Swagger for automated testing.
 
 ## Features
@@ -89,3 +91,16 @@ apisec -bs "<domain name>" -o "scan_results.json"
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Credits
+
+|  Projects  |  License  |
+|:----------|:---------:|
+| OWASP ZAP | Apache |
+| GraphQL-Cop | MIT |
+| Wapiti | GPL-2 |
+| Wfuzz | GPL-2 |
+| Gobuster | Apache |
+| Offat | MIT |
+
+
