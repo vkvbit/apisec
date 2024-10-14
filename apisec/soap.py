@@ -6,10 +6,10 @@ zap_path = init.zap_path
 
 def zap_soap(uri):        
         
-    zap_cmd_soap = f"{zap_path} -cmd -quickurl {uri} -quickout /app/zap/report.json"
+    zap_cmd_soap = f"{zap_path} -cmd -quickurl {uri} -quickout /opt/graphql-cop/zap-report.json"
     subprocess.run(zap_cmd_soap, shell=True)
 
-    with open('/app/zap/report.json', 'r') as file:
+    with open('/opt/graphql-cop/zap-report.json', 'r') as file:
         data = json.load(file)
     
     formatted_data = []
@@ -47,6 +47,7 @@ def zap_soap(uri):
                 }
 
                 url_vulns[uri].append(vuln)
+    if os.path.exists("/opt/graphql-cop/zap-report.json"):
 
     for uri, vulns in url_vulns.items():
         formatted_data.append({
