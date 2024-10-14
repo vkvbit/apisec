@@ -48,6 +48,7 @@ def zap_soap(uri):
 
                 url_vulns[uri].append(vuln)
     if os.path.exists("/opt/graphql-cop/zap-report.json"):
+        os.remove('/opt/graphql-cop/zap-report.json')
 
     for uri, vulns in url_vulns.items():
         formatted_data.append({
