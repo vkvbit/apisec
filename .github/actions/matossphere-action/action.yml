@@ -1,0 +1,30 @@
+# action.yml
+name: "MatosSphere GitHub Action"
+description: "Run MatosSphere scan against SAST projects"
+author: 'Cloudmatos'
+branding:
+  icon: "shield"
+  color: "green"
+inputs:
+  scan_dir:
+    description: 'scan_dir'
+    required: true
+  api_key:
+    description: 'api_key'
+    required: true
+  tenant_id:
+    description: 'tenant_id'
+    required: true
+  username:
+    description: 'Username'
+    required: false
+  password:
+    description: 'Password'
+    required: false
+  docker_network:
+    description: 'Docker Network ID'
+    default: ${{ job.container.network }}
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

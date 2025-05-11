@@ -1,0 +1,22 @@
+name: MatosSphere Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  matossphere_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run MatosSphere Scan
+        uses: ./github/actions/matossphere-action
+        with:
+          scan_dir: ./apisec
+          api_key: ${{ secrets.MATOS_API_KEY }}
+          tenant_id: ${{ secrets.MATOS_TENANT_ID }}
+          username: ${{ secrets.MATOS_USERNAME }}
+          password: ${{ secrets.MATOS_PASSWORD }}
