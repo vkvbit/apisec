@@ -1,4 +1,4 @@
-FROM cloudmatos/matos-sast:latest
+FROM cloudmatos/aspm-sast:latest
 
 COPY ./ /app
 
