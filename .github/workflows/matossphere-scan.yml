@@ -13,9 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run MatosSphere Scan
-        uses: ./github/actions/matossphere-action
+        uses: ./.github/actions/matossphere-action
         with:
-          scan_dir: ./apisec
+          scan_dir: .
           api_key: ${{ secrets.MATOS_API_KEY }}
           tenant_id: ${{ secrets.MATOS_TENANT_ID }}
           username: ${{ secrets.MATOS_USERNAME }}
