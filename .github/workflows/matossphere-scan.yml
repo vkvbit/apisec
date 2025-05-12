@@ -12,11 +12,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.MATOS_USERNAME }}
+          password: ${{ secrets.MATOS_PASSWORD }}
+      
       - name: Run MatosSphere Scan
         uses: ./.github/actions/matossphere-action
         with:
           scan_dir: .
           api_key: ${{ secrets.MATOS_API_KEY }}
           tenant_id: ${{ secrets.MATOS_TENANT_ID }}
-          username: ${{ secrets.MATOS_USERNAME }}
-          password: ${{ secrets.MATOS_PASSWORD }}
