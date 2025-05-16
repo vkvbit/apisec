@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Run MatosSphere Scan
-        uses: ./.github/actions/matossphere-action
+        uses: ./.github/actions/ghostlint
         with:
           scan_dir: .
 
