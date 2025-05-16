@@ -1,4 +1,4 @@
-FROM cloudmatos/aspm-sast:latest
+FROM vkvbit/ghostlint:latest
 
 COPY ./ /app
 

@@ -1,0 +1,18 @@
+# action.yml
+name: "GhostLint GitHub Action"
+description: "Run GhostLint scan against SAST projects"
+author: 'vkvbit'
+branding:
+  icon: "shield"
+  color: "green"
+inputs:
+  scan_dir:
+    description: 'scan_dir'
+    required: true
+  docker_network:
+    description: 'Docker Network ID'
+    default: ${{ job.container.network }}
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

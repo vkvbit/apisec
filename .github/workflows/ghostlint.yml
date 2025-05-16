@@ -1,0 +1,27 @@
+name: GhostLint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ghostlint_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Run MatosSphere Scan
+        uses: ./.github/actions/matossphere-action
+        with:
+          scan_dir: .
+
+      - name: Upload scan report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ghostlint-report
+          path: /app/ghostlint_report.pdf
+          retention-days: 14
