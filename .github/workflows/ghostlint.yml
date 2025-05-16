@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Run MatosSphere Scan
+      - name: Run GhostLint Scan
         uses: ./.github/actions/ghostlint
         with:
           scan_dir: .
