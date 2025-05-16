@@ -26,5 +26,5 @@ jobs:
         if: always()
         with:
           name: ghostlint-report
-          path: /app/ghostlint_report.pdf
+          path: ghostlint_report.pdf
           retention-days: 14
