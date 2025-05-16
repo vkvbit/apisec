@@ -17,6 +17,9 @@ jobs:
         uses: ./.github/actions/ghostlint
         with:
           scan_dir: .
+      
+      - name: List contents of /app
+        run: ls -la /app
 
       - name: Upload scan report
         uses: actions/upload-artifact@v4
